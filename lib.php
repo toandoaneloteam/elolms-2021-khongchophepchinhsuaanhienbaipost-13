@@ -3365,7 +3365,7 @@ function forum_print_post($post, $discussion, $forum, &$cm, $course, $ownpost=fa
                 $showbtn .= html_writer::end_tag('a');
             }
             // Elo: Duy show end
-            $output .= html_writer::tag('div', get_string('forumbodyhided', 'forum'), ['class' => 'content']); // Content.
+            $output .= html_writer::tag('div', get_string('forumbodyhided', 'forum').$showbtn, ['class' => 'content']); // Content.
         } else{
             $output .= html_writer::tag('div', get_string('forumbodydeleted', 'forum'), ['class' => 'content']); // Content.
         }
