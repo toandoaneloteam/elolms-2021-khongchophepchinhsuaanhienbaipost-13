@@ -7,6 +7,7 @@
   - mod/forum/post.php
   - mod/forum/lib.php
   - mod/forum/version.php
+  - mod/forum/styles.css
  + cập nhật quyền 
     -Hide any posts (anytime) : Allow
     - Hide own posts (within deadline): Allow
