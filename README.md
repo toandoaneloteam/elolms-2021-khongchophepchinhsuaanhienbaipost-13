@@ -9,8 +9,8 @@
   - mod/forum/version.php
   - mod/forum/styles.css
  + cập nhật quyền Giảng viên, trợ giảng 
-    -Hide any posts (anytime) : Allow
+    - Hide any posts (anytime) : Allow
     - Hide own posts (within deadline): Allow
  + cập nhật quyền Sinh viên
-    -Hide any posts (anytime) : Not set
+    - Hide any posts (anytime) : Not set
     - Hide own posts (within deadline): Not set
