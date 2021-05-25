@@ -41,3 +41,4 @@ $string['forumbodyhided'] = 'Nội dung của bài đăng trên diễn đàn nà
 $string['forum:hideanypost'] = 'Ẩn bất kỳ bài đăng nào (bất cứ lúc nào)';
 $string['forum:hideownpost'] = 'Ẩn bài viết của chính mình (trong thời hạn))';
 $string['errorwhilehide'] = 'Đã xảy ra lỗi khi cập nhật bản ghi.';
+$string['anserforquestionasker'] = 'Thảo luận trả lời cho người đặt câu hỏi';
