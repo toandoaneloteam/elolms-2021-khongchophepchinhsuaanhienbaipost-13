@@ -6099,7 +6099,7 @@ function forum_print_discussion($course, $cm, $forum, $discussion, $post, $mode,
                     . '<div class="col-12 col-lg-6">
                         <div class="row">
                             <div class="col-12 col-lg-12 card-body">
-                                <div class="font-weight-bold">'.get_string('anserforquestionasker', 'forum').' ('.$teachercount->countnorateteacher.' thành viên)</div>
+                                <div class="font-weight-bold">'.get_string('anserforquestionasker', 'forum').' ('.$teachercount->countnorateteacher.' '.get_string('questionstring', 'forum').')</div>
                                 <div class="">'.$teachercount->noratelinkteacher.'</div>
                             </div>
                             
