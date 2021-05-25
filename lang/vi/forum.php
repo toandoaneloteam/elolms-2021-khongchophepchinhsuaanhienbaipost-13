@@ -43,3 +43,4 @@ $string['forum:hideownpost'] = 'Ẩn bài viết của chính mình (trong thờ
 $string['errorwhilehide'] = 'Đã xảy ra lỗi khi cập nhật bản ghi.';
 $string['eventdiscussionnorate'] = 'Tất cả thảo luận chưa chấm điểm';
 $string['anserforquestionasker'] = 'Thảo luận trả lời cho người đặt câu hỏi';
+$string['questionstring'] = 'câu trả lời';
