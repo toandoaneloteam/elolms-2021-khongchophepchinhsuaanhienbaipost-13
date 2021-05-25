@@ -618,7 +618,7 @@ $string['forumbodydeleted'] = 'The content of this forum post has been removed a
 $string['rates'] = 'Unrated post';
 $string['notratesassginment'] = 'Unrated assignment number ';
 $string['notratesforum'] = 'Unrated forum number ';
-
+$string['anserforquestionasker'] = 'Answer for question asker';
 //Elo: Duy
 $string['hide'] = 'Hide';
 $string['show'] = 'Show';
