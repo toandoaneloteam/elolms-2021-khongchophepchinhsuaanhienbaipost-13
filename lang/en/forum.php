@@ -619,6 +619,7 @@ $string['rates'] = 'Unrated post';
 $string['notratesassginment'] = 'Unrated assignment number ';
 $string['notratesforum'] = 'Unrated forum number ';
 $string['anserforquestionasker'] = 'Answer for question asker';
+$string['questionstring'] = 'answers';
 //Elo: Duy
 $string['hide'] = 'Hide';
 $string['show'] = 'Show';
