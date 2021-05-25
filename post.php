@@ -595,7 +595,8 @@ if (!empty($forum)) {      // User is starting a new discussion in a forum
                     // thread.
                     $discussionurl = new moodle_url("/mod/forum/view.php", array('f' => $forum->id));
                 } else {
-                    $discussionurl = new moodle_url("/mod/forum/discuss.php", array('d' => $discussion->id));
+                     $discussionurl = $CFG->wwwroot.'/mod/forum/discuss.php?d='.$post->discussion.'#p'.$post->id;// Elo:Duy
+//                    $discussionurl = new moodle_url("/mod/forum/discuss.php", array('d' => $discussion->id));
                 }
 
                 redirect(forum_go_back_to($discussionurl));
@@ -704,7 +705,8 @@ if (!empty($forum)) {      // User is starting a new discussion in a forum
                     // thread.
                     $discussionurl = new moodle_url("/mod/forum/view.php", array('f' => $forum->id));
                 } else {
-                    $discussionurl = new moodle_url("/mod/forum/discuss.php", array('d' => $discussion->id));
+                     $discussionurl = $CFG->wwwroot.'/mod/forum/discuss.php?d='.$post->discussion.'#p'.$post->id;// Elo:Duy
+//                    $discussionurl = new moodle_url("/mod/forum/discuss.php", array('d' => $discussion->id));
                 }
 
                 redirect(forum_go_back_to($discussionurl));
