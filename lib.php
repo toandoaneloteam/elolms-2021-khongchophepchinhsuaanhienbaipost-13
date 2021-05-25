@@ -3133,32 +3133,43 @@ function forum_get_course_forum($courseid, $type) {
  */
 //Nhien start-------------------------------------------------------------------
 function forum_is_null_rate($post, $discussion, $forum, &$cm, $course) {
-    //require_once($CFG->libdir . '/filelib.php');
-    global $USER;
+   global $USER;
     $post->course = $course->id;
-    $post->forum  = $forum->id;
-      
+    $post->forum = $forum->id;
+    $context = get_context_instance(CONTEXT_COURSE, $post->course, true);
+    $roles = get_user_roles($context, $post->userid, true);
+    foreach ($roles as $role) {
+        if ($role->roleid != 5) {
+            return 'kcdbvgv'; // post cua gv
+        }
+    }
+    if (!empty($forum->assesstimestart) &&
+            !empty($forum->assesstimefinish &&
+                    ($post->created != $post->modified) &&
+                    ($post->modified < $post->rating->settings->assesstimestart || $post->modified > $post->rating->settings->assesstimefinish))) {
+        return 'kttl';
+    }
+    if (!empty($forum->assesstimestart) &&
+            !empty($forum->assesstimefinish &&
+                    ($post->created == $post->modified) && ($post->created < $post->rating->settings->assesstimestart ||
+                    $post->created > $post->rating->settings->assesstimefinish))) {
+        return 'kttl';
+    }
     if (!forum_user_can_see_post($forum, $discussion, $post, null, $cm, false)) {
-        return 'hide';
+        return 'hide'; //post an
     }
     if (!empty($post->deleted)) {
-        // Note: Posts marked as deleted are still returned by the above forum_user_can_post because it is required for
-        // nesting of posts.
         return 'delete';
     }
-    if($USER->id == $post->userid){
+    if ($USER->id == $post->userid) {
         return 'notrateme';
     }
-    // Output ratings
-    if (!empty($post->rating->aggregate)){
-        return 'rate';
+    if (isset($post->rating->aggregate)) {
+        return 'rate'; //da duoc giao vien cham diem
     }
     if (isset($post->rating->rating)) {
-        return 'kocochamdiem';//nhien co diem
+        return 'kccd'; //tai khoan co quyen cham diem 
     }
-    if (!empty($forum->assesstimefinish) &&  $forum->assesstimefinish < $post->created){
-        return 'kethucthaoluan'; // ket thuc thoi gian thao luan
-    } 
     return 'notrate';
 }
 //Nhien end---------------------------------------------------------------------
