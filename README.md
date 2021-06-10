@@ -13,7 +13,7 @@
     - Hide own posts (within deadline): Allow
  + cập nhật quyền Sinh viên
     - Hide any posts (anytime) : Not set
-    - Hide own posts (within deadline): Not set
+    - Hide own posts (within deadline): Not set  
   ============================================================    
 +Không cho giáo viên , sinh viên xóa và chỉnh sửa bài post giảng viên, sinh viên
   - Delete any posts (anytime) : Not set
