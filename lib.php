@@ -5325,6 +5325,19 @@ function forum_user_can_post_discussion($forum, $currentgroup=null, $unused=-1, 
     } else {
         $capname = 'mod/forum:startdiscussion';
     }
+    if ($forum->assesstimestart > 0 && $forum->assesstimefinish > 0) {//toan 24/05/2021
+        $roles = get_user_roles($context, $USER->id, true);
+        foreach ($roles as $role) {
+            if ($role->roleid == 5) {
+                if ($forum->maxattachments == 1 && ($forum->completiondiscussions == 1 || $forum->completionposts == 1)) {
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+        return true;
+    }
     if (!has_capability($capname, $context)) {
         return false;
     }
