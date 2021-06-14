@@ -1,4 +1,4 @@
-# chucnang09
+# elolms-2021-khongchinhsuaanhien-cn09
 Chức năng: Ở diễn đàn thảo luận, hiện tại giảng viên có thể sửa bài viết của SV => request: không cho sửa bài của SV, đồng thời thêm nút ẩn bài nếu bài post vi phạm quy định  
 Yêu cầu: thực hiện sau chức năng elolms-2021-khongchophepsvdangbaimoi-cn08 `https://github.com/OU-University/elolms-2021-khongchophepsvdangbaimoi-cn08`  
 Hướng dẫn:  
